@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <%- include('layouts/header'); -%>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- navbar section strats -->
+      
+      <%- include('layouts/navbar'); -%>
+
+      <!-- end navbar section -->
+    </div>
+
+    <!-- shop section -->
+    <% product.forEach(function(product) { %>
+    <section class="chocolate_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Our chocolate products
+          </h2>
+          <p>
+            Home made by our family to your family.
+          </p>
+        </div>
+      </div>
+      <div id="products_container" class="container">
+        <div class="chocolate_container">
+          <div class="box">
+            <div class="img-box">
+              <img src="pictures/chocolate_bar.jpeg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                Milk <span>chocolate</span>
+              </h6>
+              <h5>
+                £5
+              </h5>
+              <a href="/order/<%= product.id %>" class="btn btn-success pull-right">
+                <button>BUY NOW</button>
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="pictures/truffle.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                Dark <span>truffles</span>
+              </h6>
+              <h5>
+                £2
+              </h5>
+              <a href="/order/<%= product.id %>" class="btn btn-success pull-right">
+                <button>BUY NOW</button>
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="pictures/box_truffles.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                Box <span>truffles</span>
+              </h6>
+              <h5>
+                £15
+              </h5>
+              <a href="/order/<%= product.id %>" class="btn btn-success pull-right">
+                <button>BUY NOW</button>
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="pictures/mint_chocolate.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                Mint <span>chocolate</span>
+              </h6>
+              <h5>
+                £5
+              </h5>
+              <a href="/order/<%= product.id %>" class="btn btn-success pull-right">
+                <button>BUY NOW</button>
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="pictures/pistachio_almond.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                Pistachio and Almond <span>truffles</span>
+              </h6>
+              <h5>
+                £4
+              </h5>
+              <a href="/order/<%= product.id %>" class="btn btn-success pull-right">
+                <button>BUY NOW</button>
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="pictures/white_chocolate.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                White <span>chocolate</span>
+              </h6>
+              <h5>
+                £5
+              </h5>
+              <a href="/order/<%= product.id %>" class="btn btn-success pull-right">
+                <button>BUY NOW</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <% }); %>
+    <!-- end chocolate section -->
+
+    <!-- info section -->
+    
+    <%- include('layouts/info'); -%>
+
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  <%- include('layouts/footer'); -%>
+  <!-- footer section -->
+
+ <!--Start JavaScript section-->
+
+ <%- include('layouts/javaScript'); -%>
+
+ <!--JavaScript end-->
+
+</body>
+
+</html>

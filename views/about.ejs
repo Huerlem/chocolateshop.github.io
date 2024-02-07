@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <%- include('layouts/header'); -%>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- navbar section strats -->
+
+      <%- include('layouts/navbar'); -%>
+      
+      <!-- end navbar section -->
+    </div>
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding ">
+      <div class="container  ">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  About Our Company
+                </h2>
+              </div>
+              <p>
+                We are a small family company since 1988. However, our recipe is passing down from generation to generation. We make our chocolate from the cocoa beans, imported from Brazil. </p>
+              <a href="#">
+                <span>
+                  Read More
+                </span>
+                <img src="images/color-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="pictures/cocoa.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end about section -->
+
+
+    <!-- info section -->
+    
+    <%- include('layouts/info'); -%>
+
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  <%- include('layouts/footer'); -%>
+  <!-- footer section -->
+
+  <!--Start JavaScript section-->
+
+  <%- include('layouts/javaScript'); -%>
+
+  <!--JavaScript end-->
+
+</body>
+
+</html>

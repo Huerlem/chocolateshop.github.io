@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('layouts/header'); -%>
+</head>
+
+<body class="sub_page">
+    <div class="main_body_content">
+        <div class="hero_area">
+            <!-- Navbar section starts -->
+            <%- include('layouts/navbar'); -%>
+            <!-- End navbar section -->
+        </div>
+
+        <!-- Login section -->
+        <section class="contact_section layout_padding">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-lg-4 offset-md-1 offset-lg-2">
+                        <div class="form_container">
+                            <div class="heading_container">
+                                <h2>Login</h2>
+                                <!-- Display login error messages -->
+                                <% if (hasErrors) { %>
+                                <div class="alert alert-danger">
+                                    <% messages.forEach(function(message) { %>
+                                    <p><%= message %></p>
+                                    <% }); %>
+                                </div>
+                                <% } %>
+                            </div>
+                            <!-- Login form -->
+                            <form action="/login" method="post">
+                                <div>
+                                    <label for="login-email">E-mail</label>
+                                    <input type="email" id="login-email" name="email" placeholder="E-mail" />
+                                </div>
+                                <div>
+                                    <label for="login-password">Password</label>
+                                    <input type="password" id="login-password" name="password" placeholder="Password" />
+                                </div>
+                                <div class="d-flex">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <button type="submit" class="btn btn-primary">Log in</button>
+                                </div>
+                            </form>
+
+                            <!-- Registration form -->
+                            <h2>Register</h2>
+                            <!-- Display registration error messages -->
+                            <% if (hasErrors) { %>
+                            <div class="alert alert-danger">
+                                <% messages.forEach(function(message) { %>
+                                <p><%= message %></p>
+                                <% }); %>
+                            </div>
+                            <% } %>
+                            <!-- Registration form -->
+                            <form action="/register" method="post">
+                                <div>
+                                    <label for="register-name">Full Name</label>
+                                    <input type="text" id="register-name" name="name" placeholder="Full Name" />
+                                </div>
+                                <div>
+                                    <label for="register-phone">Phone</label>
+                                    <input type="tel" id="register-phone" name="phone" placeholder="Phone" />
+                                </div>
+                                <div>
+                                    <label for="register-email">Email</label>
+                                    <input type="email" id="register-email" name="email" placeholder="Email" />
+                                </div>
+                                <div>
+                                    <label for="register-address">Address</label>
+                                    <input type="text" id="register-address" name="address" placeholder="Address" />
+                                </div>
+                                <div>
+                                    <label for="register-password">Password</label>
+                                    <input type="password" id="register-password" name="password" placeholder="Password" />
+                                </div>
+                                <div>
+                                    <label for="register-password2">Confirm Password</label>
+                                    <input type="password" id="register-password2" name="password2" placeholder="Confirm Password" />
+                                </div>
+                                <div class="d-flex">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End login section -->
+
+        <!-- Info section -->
+        <%- include('layouts/info'); -%>
+        <!-- End info section -->
+    </div>
+
+    <!-- Footer section -->
+    <%- include('layouts/footer'); -%>
+    <!-- End footer section -->
+
+    <!-- JavaScript section -->
+    <%- include('layouts/javaScript'); -%>
+    <!-- End JavaScript section -->
+</body>
+
+</html>

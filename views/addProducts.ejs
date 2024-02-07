@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('layouts/header'); -%>
+</head>
+
+<body class="sub_page">
+
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- navbar section strats -->
+      
+      <%- include('layouts/navbar'); -%>
+
+      <!-- end navbar section -->
+    </div>
+
+
+    <!-- contact section -->
+
+    <section class="contact_section layout_padding">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1 offset-lg-2">
+            <div class="form_container">
+              <div class="heading_container">
+                <h2>
+                  Add Your New Products
+                </h2>
+              </div>
+              <form action="/addProducts" method="post">
+                <div>
+                  <input type="String" id="product" placeholder="Item: " />
+                </div>
+                <div>
+                  <input type="String" id="description" placeholder="Description:" />
+                </div>
+                <div>
+                  <input type="Number" id="weight" placeholder="Weight:" />
+                </div>
+                <div>
+                  <input type="boolean" id="price" placeholder="Price:" />
+                </div>
+                <div>
+                    <input type="String" id="category"  placeholder="Category:" />
+                </div>
+                <div>
+                    <input type="Number" id="quantity_stock" placeholder="Quantity:" />
+                </div>
+                <div class="d-flex ">
+                  <button>
+                    Add Product
+                  </button>
+                  
+                  </form>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+
+    <!-- info section -->
+    
+    <%- include('layouts/info'); -%>
+
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  <%- include('layouts/footer'); -%>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- slick slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

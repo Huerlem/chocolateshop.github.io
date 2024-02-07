@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <%- include('layouts/header'); -%>
+    
+</head>
+<body class="sub_page">
+
+    <div class="main_body_content">
+
+        <div class="hero_area">
+          <!-- navbar section strats -->
+    
+          <%- include('layouts/navbar'); -%>
+          
+          <!-- end navbar section -->
+        </div>
+
+        <main>
+            <section id="customer">
+                <h2>Customer Information</h2>
+                <p>Name: <%= name %></p>
+                <p>Email: <%= email %></p>
+                <p>Phone: <%= phone %></p>
+                <p>Address: <%= address %></p>
+            </section>
+    
+            <section id="payment-info">
+                <h2>Payment Information</h2>
+                <form action="/profile/payment" method="POST">
+                    <label for="payment-method">Payment Method:</label>
+                    <select name="payment-method" id="payment-method">
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <!-- Outras opções de pagamento -->
+                    </select>
+                    <button type="submit">Save Payment Method</button>
+                </form>
+            </section>
+    
+            <section id="order-history">
+                <h2>Order History</h2>
+                <ul>
+                    <% orders.forEach(order => { %>
+                        <li>
+                            <p>Date: <%= order.date %></p>
+                            <p>Products: <%= order.products.join(', ') %></p>
+                            <p>Total: $<%= order.total %></p>
+                        </li>
+                    <% }); %>
+                </ul>
+            </section>
+        </main>
+    
+
+     <!-- info section -->
+    
+     <%- include('layouts/info'); -%>
+
+     <!-- end info_section -->
+ 
+   </div>
+ 
+   <!-- footer section -->
+   <%- include('layouts/footer'); -%>
+   <!-- footer section -->
+ 
+   <!--Start JavaScript section-->
+ 
+   <%- include('layouts/javaScript'); -%>
+ 
+   <!--JavaScript end-->
+ 
+</body>
+
+</html>

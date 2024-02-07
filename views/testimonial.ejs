@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <%- include('layouts/header'); -%>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- navbar section strats -->
+      
+      <%- include('layouts/navbar'); -%>
+
+      <!-- end navbar section -->
+    </div>
+
+
+    <!-- client section -->
+
+    <section class="client_section layout_padding">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="img-box sub_img-box">
+              <img src="images/client-chocolate.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 px-0">
+            <div class="client_container">
+              <div class="heading_container">
+                <h2>
+                  Testimonial
+                </h2>
+              </div>
+              <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="box">
+                      <div class="img-box">
+                        <img src="images/client1.jpg" alt="">
+                      </div>
+                      <div class="detail-box">
+                        <h4>
+                          Anna
+                        </h4>
+                        <p>
+                          The most fabulous and tasty chocolate I have tried ever. It is like a dream!
+                        </p>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="box">
+                      <div class="img-box">
+                        <img src="images/client1.jpg" alt="">
+                      </div>
+                      <div class="detail-box">
+                        <h4>
+                          Anna 
+                        </h4>
+                        <p>
+                          The most fabulous and tasty chocolate I have tried ever. It is like a dream!
+                        </p>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="box">
+                      <div class="img-box">
+                        <img src="images/client1.jpg" alt="">
+                      </div>
+                      <div class="detail-box">
+                        <h4>
+                          Anna
+                        </h4>
+                        <p>
+                          The most fabulous and tasty chocolate I have tried ever. It is like a dream! Also, this family are amazing. They know what they are making.
+                        </p>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel_btn-box">
+                  <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end client section -->
+
+    <!-- info section -->
+    
+    <%- include('layouts/info'); -%>
+
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  <%- include('layouts/footer'); -%>
+  <!-- footer section -->
+
+<!--Start JavaScript section-->
+
+<%- include('layouts/javaScript'); -%>
+
+<!--JavaScript end-->
+
+</body>
+
+</html>
